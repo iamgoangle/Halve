@@ -1,13 +1,13 @@
 # Site
-title: Halve
-description: Stylish, Two-Column Jekyll Theme
+title: Teerapong Singthong
+description: Ordinary people who focusing on 'Development'
 url: https://iamgoangle.github.io
-logo: halve.png                                       # Site logo
+logo: golf-logo.png                                       # Site logo
 locale: en_US
 
 # Left Block Images
 background:
-  homepage: images/home.png                           # this image will be shown on homepage's left block
+  homepage: images/golf-home.png                           # this image will be shown on homepage's left block
   post-list: images/unsplash-image-10.jpg             # this image will be shown on post list page
   default-post: images/unsplash-gallery-image-3.jpg   # this image will be shown when post's front matter doesn't specify any image
 
@@ -34,7 +34,7 @@ email:              st.teerapong@gmail.com
 twitter:            iamgoangle
 facebook:           goangle
 github:             iamgoangle
-stackoverflow:      teerapong-singthong
+stackoverflow:      http://stackoverflow.com/users/6495718/teerapong-singthong
 linkedin:           goangle
 #xing:              username
 #instagram:          username
@@ -42,7 +42,7 @@ linkedin:           goangle
 #tumblr:            username
 #pinterest:         username
 #foursquare:        username
-#steam:              username
+steam:              iamgoangle
 #dribbble:          username
 #youtube:           username
 #soundcloud:        username
@@ -52,7 +52,7 @@ linkedin:           goangle
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-behance:           username
+#behance:           username
 
 # Gems
 gems:
