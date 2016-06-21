@@ -3,4 +3,4 @@ layout: home
 ---
 # About Me
 
-Yo! I am a software developer who likes web development technology. Like to travel by Bicycle.
+Hi! My nickname is Golf. I am a Software Developer who living in Thailand, the ordinary people who likes web development technology and loves to travel by Bicycle.
