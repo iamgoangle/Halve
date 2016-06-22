@@ -11,3 +11,7 @@ sitemap: false
 @import "vendor/fonts";
 @import "vendor/font-awesome/font-awesome";
 @import "vendor/magnific-popup/magnific-popup";
+
+pre code{
+  white-space: pre;
+}
