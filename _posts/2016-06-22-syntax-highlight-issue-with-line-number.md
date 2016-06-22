@@ -49,14 +49,6 @@ Syntax highlight หรือ markdown code ไม่รอบรับการ
 
 [Jekyll markdown code](https://jekyllrb.com/docs/templates/#code-snippet-highlighting)
 
-ด้วยวิธีนี้ ใส่ `linenos` เข้าไปดัง ตัวอย่างข้างล่าง
-
-```
-{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-```
+ด้วยวิธีนี้ ใส่ `linenos` เข้าไป
 
 แต่เมื่อนำมาใช้จริงพบว่า page ไม่สามารถแสดงผลได้ถูกต้องได้ stylesheet ดันมา overide กับ theme ที่ใช้อยู่ซ่ะงั้น
