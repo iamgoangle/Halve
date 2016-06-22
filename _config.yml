@@ -1,7 +1,11 @@
 # Site
 title: Teerapong Singthong
 description: Ordinary person who focusing on 'Development'
+<<<<<<< HEAD
 url: https://iamgoangle.github.com
+=======
+url: https://iamgoangle.github.io
+>>>>>>> parent of 2663c6e... Add new content
 logo: golf-logo.png                                       # Site logo
 locale: en_US
 
