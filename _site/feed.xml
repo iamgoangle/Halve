@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-06-24T00:21:05+07:00</updated><id>http://127.0.0.1:4000/</id><title>Teerapong Singthong</title><subtitle>Ordinary person who focusing on &#39;Development&#39;</subtitle><entry><title>เริ่มต้น Saas CSS preprocessor</title><link href="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/" rel="alternate" type="text/html" title="เริ่มต้น Saas CSS preprocessor" /><published>2016-06-23T00:00:00+07:00</published><updated>2016-06-23T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/">&lt;h2 id=&quot;saas-&quot;&gt;Saas คืออะไร&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-06-24T01:13:03+07:00</updated><id>http://127.0.0.1:4000/</id><title>Teerapong Singthong</title><subtitle>Ordinary person who focusing on &#39;Development&#39;</subtitle><entry><title>เริ่มต้น Saas CSS preprocessor</title><link href="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/" rel="alternate" type="text/html" title="เริ่มต้น Saas CSS preprocessor" /><published>2016-06-23T00:00:00+07:00</published><updated>2016-06-23T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/">&lt;h2 id=&quot;saas-&quot;&gt;Saas คืออะไร&lt;/h2&gt;
 &lt;p&gt;Saas คือ CSS Preprocessor ที่มี feature ต่างๆ ที่ช่วยให้การเขียน CSS มีความกระชับ ลดความซ้ำซ้อน
 ลดความซับซ้อนของตัว CSS ได้&lt;/p&gt;
 
@@ -8,9 +8,8 @@
 
 &lt;h2 id=&quot;css-preprocessor-1&quot;&gt;ทำไมต้อง CSS Preprocessor?&lt;/h2&gt;
 &lt;p&gt;โดยปกติแล้ว CSS style ที่เราเขียนกันทุกวันนี้ มันก็โอเคอยู่แล้ว ถ้าโปรเจคเรามีขนาดเล็ก มีความซับซ้อนน้อย
-หรือ เราเทพจริงๆในการลดความซ้ำซ้อนของ selector, id, class แต่ในความเป็นจริง คือ ไม่ใช่!!&lt;/p&gt;
-
-&lt;p&gt;นั่นจึงเป็นเหตุผลให้เกิดเครื่องมือ หรือมาตรฐานการเขียน css แบบ preprocessor&lt;/p&gt;
+หรือ เราเทพจริงๆในการลดความซ้ำซ้อนของ selector, id, class แต่ในความเป็นจริง คือ ไม่ใช่!!
+นั่นจึงเป็นเหตุผลให้เกิดเครื่องมือ หรือมาตรฐานการเขียน css แบบ preprocessor&lt;/p&gt;
 
 &lt;h2 id=&quot;saas--features-&quot;&gt;Saas มี features อะไรบ้าง?&lt;/h2&gt;
 &lt;p&gt;อย่างที่กล่าวไป Saas ช่วยให้เราสามารถทำ Nesting, Variables, Mixins and Operators ได้ ดังนั้น มาดูกันว่า แต่ละตัว
