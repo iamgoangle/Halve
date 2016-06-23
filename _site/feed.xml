@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-06-23T23:51:48+07:00</updated><id>http://127.0.0.1:4000/</id><title>Teerapong Singthong</title><subtitle>Ordinary person who focusing on &#39;Development&#39;</subtitle><entry><title>เริ่มต้น Saas CSS preprocessor</title><link href="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/" rel="alternate" type="text/html" title="เริ่มต้น Saas CSS preprocessor" /><published>2016-06-23T00:00:00+07:00</published><updated>2016-06-23T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/">&lt;h2 id=&quot;saas-&quot;&gt;Saas คืออะไร&lt;/h2&gt;
+&lt;p&gt;Saas คือ CSS Preprocessor ที่มี feature ต่างๆ ที่ช่วยให้การเขียน CSS มีความกระชับ ลดความซ้ำซ้อน
+ลดความซับซ้อนของตัว CSS ได้&lt;/p&gt;
+
+&lt;h2 id=&quot;css-preprocessor&quot;&gt;อะไรคือ CSS Preprocessor?&lt;/h2&gt;
+&lt;p&gt;คือ การเขียน CSS อีกรูปแบบหนึ่ง ที่ให้เราสามารถเขียน CSS แบบ Nesting, Variables, Mixins and Operators
+ก่อน แล้วจึง processor ให้เป็น .css file&lt;/p&gt;
+
+&lt;h2 id=&quot;css-preprocessor-1&quot;&gt;ทำไมต้อง CSS Preprocessor?&lt;/h2&gt;
+&lt;p&gt;โดยปกติแล้ว CSS style ที่เราเขียนกันทุกวันนี้ มันก็โอเคอยู่แล้ว ถ้าโปรเจคเรามีขนาดเล็ก มีความซับซ้อนน้อย
+หรือ เราเทพจริงๆในการลดความซ้ำซ้อนของ selector, id, class แต่ในความเป็นจริง คือ ไม่ใช่!!&lt;/p&gt;
+
+&lt;p&gt;นั่นจึงเป็นเหตุผลให้เกิดเครื่องมือ หรือมาตรฐานการเขียน css แบบ preprocessor&lt;/p&gt;</content><category term="css" /><category term="saas" /><category term="preprocessor" /></entry><entry><title>npm install แต่ละ option ต่างกันอย่างไร?</title><link href="http://127.0.0.1:4000/2016/06/22/what-does-npm-global-save-save-dev-means/" rel="alternate" type="text/html" title="npm install แต่ละ option ต่างกันอย่างไร?" /><published>2016-06-22T00:00:00+07:00</published><updated>2016-06-22T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/22/what does npm -global --save --save-dev means</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/22/what-does-npm-global-save-save-dev-means/">&lt;h2 id=&quot;npm-&quot;&gt;npm คืออะไร&lt;/h2&gt;
+&lt;p&gt;npm คือ package manger command ที่ใช้ในการ install package, manage package ต่างๆ ที่เกี่ยวข้องกับ NodeJS ถือเป็นคำสั่งที่ให้เราเข้าถึง package ต่างๆบน repository ของ NodeJS&lt;/p&gt;
+
+&lt;h2 id=&quot;package&quot;&gt;การติดตั้ง package&lt;/h2&gt;
+&lt;p&gt;ปกติแล้วจะใช้คำสั่ง ดังนี้&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;npm install &amp;lt;package name&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ref:&lt;a href=&quot;https://docs.npmjs.com/getting-started/installing-npm-packages-locally&quot;&gt;https://docs.npmjs.com/getting-started/installing-npm-packages-locally&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;package-&quot;&gt;จะหา package ได้ที่ไหน&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/browse/star&quot;&gt;https://www.npmjs.com/browse/star&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;npm-install-package---save---global----save-dev----save-optional-&quot;&gt;npm install package –save | -global | –save-dev | –save-optional ต่างกันอย่างไร&lt;/h2&gt;
+
+&lt;p&gt;จากหัวข้อ เราสามารถแยก การติดตั้ง package ออกเป็น 4 รูปแบบ&lt;/p&gt;
+
+&lt;h3 id=&quot;npm-install-package---save&quot;&gt;1. npm install package –save&lt;/h3&gt;
+
+&lt;p&gt;การใช้ npm แบบนี้ ผลลัพธ์ที่ได้ คือ package ใดๆก็ตามที่เลือก จะถูกติดตั้งลงในเครื่องของเรา และ add package นี้ลงใน &lt;a href=&quot;https://docs.npmjs.com/getting-started/using-a-package.json&quot;&gt;package.json&lt;/a&gt; ในส่วนของ “dependencies” โดยอัตโนมัติ&lt;/p&gt;
+
+&lt;p&gt;ยกตัวอย่าง&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;package.json&lt;/strong&gt; ก่อนใช้ –save&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_package&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;package.json&lt;/strong&gt; หลังใช้ –save&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_package&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.0.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;dependencies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;my_dep&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^1.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;สังเกตุว่ามี property ใหม่มา นั่นคือ dependencies&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;dependencies property คือ package ในส่วนของ environment production (Package will appear in your dependencies)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;npm-install-package--global&quot;&gt;2. npm install package -global&lt;/h3&gt;
+
+&lt;p&gt;การใช้ npm แบบนี้ผลลัพธ์ที่ได้ จะตรงข้ามกับหัวข้อที่ผ่านมา คือ เป็นการระบุ package ที่ต้องการให้ติดตั้ง ในเครื่องเราเท่านั้น ไม่ต้องเพิ่ม dependency ลง ใน package.json&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-g flag is global only to your local machine
+Ref: &lt;a href=&quot;http://stackoverflow.com/a/25092832/6495718&quot;&gt;http://stackoverflow.com/a/25092832/6495718&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;npm-install-package---save-dev&quot;&gt;3. npm install package –save-dev&lt;/h3&gt;
+
+&lt;p&gt;ผลลัพธ์ที่ได้จากการติดตั้ง package แบบนี้ package ที่ถูก install ลงในเครื่องเรา จะถูกเพิ่มใน package.json ด้วย ใน property devDependencies&lt;/p&gt;
+
+&lt;h3 id=&quot;nom-install-package---save-optionaldependencies&quot;&gt;4. nom install package –save-optionalDependencies&lt;/h3&gt;
+
+&lt;p&gt;package จะถูกติดตั้งในเครื่องของเรา รวมไปถึงการเพิ่ม dependency ลง package.json ในส่วนของ property optionalDependencies&lt;/p&gt;
+
+&lt;h2 id=&quot;deployment&quot;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;Production Environment&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install –production&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Developer Environtment&lt;/p&gt;
+
+&lt;p&gt;npm install –dev`&lt;/p&gt;
+
+&lt;h2 id=&quot;useful-links&quot;&gt;Useful Links&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.nodejitsu.com/npm-cheatsheet&quot;&gt;http://blog.nodejitsu.com/npm-cheatsheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.martroutine.com/2013/08/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A-package-js/&quot;&gt;http://blog.martroutine.com/2013/08/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A-package-js/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nextflow.in.th/2015/better-node-js-module-install/&quot;&gt;http://nextflow.in.th/2015/better-node-js-module-install/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/25092617/npm-install-bower-using-g-vs-save-dev&quot;&gt;http://stackoverflow.com/questions/25092617/npm-install-bower-using-g-vs-save-dev&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="nodejs" /><category term="npm" /><category term="dependency" /></entry><entry><title>How to get windows product key</title><link href="http://127.0.0.1:4000/2016/06/22/how-to-get-window-product-key/" rel="alternate" type="text/html" title="How to get windows product key" /><published>2016-06-22T00:00:00+07:00</published><updated>2016-06-22T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/22/how-to-get-window-product-key</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/22/how-to-get-window-product-key/">&lt;p&gt;In order to get windows product key by easily way without edit registry or somehow. There is easy way to get it by step as below.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open your text editor&lt;/li&gt;
+  &lt;li&gt;Copy the command below to your editor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-visualbasic&quot; data-lang=&quot;visualbasic&quot;&gt;&lt;span class=&quot;k&quot;&gt;Option&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Explicit&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;objshell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DigitalID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Result&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CreateObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;WScript.Shell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;&#39;Set registry key path&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;&#39;Registry key value&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;DigitalID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;DigitalProductId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ProductName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProductID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProductKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProductData&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;&#39;Get ProductName, ProductID, ProductKey&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ProductName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Product Name: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ProductName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ProductID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Product ID: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ProductID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ProductKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Installed Key: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ConvertToKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DigitalID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ProductData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProductName&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbNewLine&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProductID&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbNewLine&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProductKey&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;&#39;Show messbox if save to a file&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbYes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MsgBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProductData&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vblf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vblf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Save to a file?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbYesNo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbQuestion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;BackUp Windows Key Information&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;then&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;Save&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProductData&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
+
+
+
+&lt;span class=&quot;c1&quot;&gt;&#39;Convert binary to chars&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ConvertToKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Const&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;KeyOffset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isWin8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Maps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keypart1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;&#39;Check if OS is Windows 8&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;isWin8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;\&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;And&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;And&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HF7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;Or&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isWin8&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;And&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Maps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;BCDFGHJKMPQRTVWXY2346789&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Do&lt;/span&gt;
+       	&lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;Do&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;256&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KeyOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KeyOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;\&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;Mod&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;Loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;While&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Maps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Current&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;While&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;keypart1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;N&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keypart1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keypart1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ConvertToKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeyOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;&#39;Save data to a file&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fso&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UserName&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CreateObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wscript.shell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;&#39;Get current user name&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;UserName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objshell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ExpandEnvironmentStrings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%UserName%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;&#39;Create a text file on desktop&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;C:\Users\&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UserName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;\Desktop\WindowsKeyInfo.txt&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fso&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CreateObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Scripting.FileSystemObject&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fso&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CreateTextFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Writeline&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Data&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Close&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Save as ‘your file.vbs’&lt;/li&gt;
+  &lt;li&gt;Double click on your file created&lt;/li&gt;
+&lt;/ol&gt;</content><category term="windows" /><category term="key" /></entry></feed>
