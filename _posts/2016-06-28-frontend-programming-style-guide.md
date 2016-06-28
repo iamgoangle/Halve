@@ -10,7 +10,7 @@ tag:
 ---
 
 ## JavaScript
-[https://github.com/lvarayut/javascript-style-guide/blob/master/es5/README.md](https://github.com/lvarayut/javascript-style-guide/blob/master/es5/README.md)
+[https://github.com/lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide/)
 
 [https://github.com/airbnb/javascript/](https://github.com/airbnb/javascript/)
 
