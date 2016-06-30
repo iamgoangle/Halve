@@ -25,15 +25,12 @@ tag:
 1. ทำการติดตั้ง Node.JS เพื่อให้ได้ npm (node package manager) (Download)[https://www.npmjs.com/]
 
 2. ทำการติดตั้งติด Gulp แบบ Global
-
 `$ npm install --global gulp-cli`
 
 3. ไปที่ directory ของ project เราแล้วทำการ initial npm
-
 `$ npm init`
 
 4. ติดตั้ง Gulp ให้อยู่ใน project package devDependencies
-
 `$ npm install gulp --save-dev`
 
 5. ถึงขั้นตอนนี้เราสามารถใช้ npm และ gulp command line ได้แล้ว เพื่อให้เราสามารถใช้ความสามารถจาก คำสั่งนี้ได้อีก เราจำเป็นต้อง ติดตั้ง plugin เสริม
@@ -43,11 +40,8 @@ tag:
 7. ติดตั้ง Ruby ไว้ในเครื่องเรา (Ruby Installer)[http://rubyinstaller.org/]
 
 8. เปิด command line แล้วติดตั้ง Ruby Sass ด้วยคำสั่งนี้
-
 `$ gem install sass`
 
 9. เมื่อติดตั้งเสร็จแล้ว ลองใช้คำสั่ง
-
 `$ sass -v`
-
 เพื่อตรวจสอบเวอร์ชั่น ของ sass
