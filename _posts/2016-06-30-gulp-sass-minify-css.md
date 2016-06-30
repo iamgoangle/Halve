@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup project to support js task runner with Gulp Sass and Minify CSS"
+title:  "Setting up the project to support js task runner with Gulp Sass and Minify CSS"
 date:   2016-06-28
 excerpt: ""
 tag:
@@ -44,4 +44,4 @@ tag:
 
 9. เมื่อติดตั้งเสร็จแล้ว ลองใช้คำสั่ง
 `$ sass -v`
-เพื่อตรวจสอบเวอร์ชั่น ของ sass 
+เพื่อตรวจสอบเวอร์ชั่น ของ sass
