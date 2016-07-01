@@ -12,7 +12,7 @@ tag:
 ---
 
 ## Gulp คืออะไร?
-`Automate and enhance your workflow` นี่คือ คำนิยามจาก Official website (http://gulpjs.com/)[http://gulpjs.com/]
+`Automate and enhance your workflow` นี่คือ คำนิยามจาก Official website [http://gulpjs.com/](http://gulpjs.com/)
 เท่าที่ใช้งานมา ผมมองว่ามัน คือ JavaScript Task Runner โดยใช้ความสามารถของ NodeJS มาช่วย เพื่อให้สามารถ watching เหตุการณ์ หรือ งานที่เราสนใจ และ ให้ทำสิ่งที่เรากำหนดไว้ได้
 
 ## วันนี้จะทำอะไร?
@@ -108,4 +108,4 @@ gulp.task('default', ['sass', 'watch', 'minify-css']);
 
 13. วิธีการรัน Gulpfile ตัวนี้ ให้เปิด command แล้วใช้คำสั่ง `$ gulp` เพื่อทำการสั่งให้ gulp ทำงานตามที่เรากำหนด
 
-### บทความหน้าผมจะพูดถึงตัวโค๊ดว่ามันทำงานอย่างไรครับ 
+### บทความหน้าผมจะพูดถึงตัวโค๊ดว่ามันทำงานอย่างไรครับ
