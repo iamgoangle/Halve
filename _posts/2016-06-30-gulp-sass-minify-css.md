@@ -104,7 +104,6 @@ gulp.task('watch', function(){
 /* default task */
 gulp.task('default', ['sass', 'watch', 'minify-css']);
 {% endhighlight %}
-
 13. วิธีการรัน Gulpfile ตัวนี้ ให้เปิด command แล้วใช้คำสั่ง `$ gulp` เพื่อทำการสั่งให้ gulp ทำงานตามที่เรากำหนด
 
 ### บทความหน้าผมจะพูดถึงตัวโค๊ดว่ามันทำงานอย่างไรครับ
