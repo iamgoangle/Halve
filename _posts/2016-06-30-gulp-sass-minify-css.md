@@ -17,6 +17,7 @@ tag:
 
 ## วันนี้จะทำอะไร?
 ผมจะใช้ความสามารถของ Gulp ทำสิ่งต่อไปนี้ให้ผม
+
 1. ผมมีไฟล์ .scss หรือ Sass Project ของผม ซึ่งเป็น CSS Preprocessor
 
 2. ทันทีที่ผมเซฟไฟล์ใน Editor ผมอยากให้ Gulp compile .scss to .css
@@ -104,6 +105,7 @@ gulp.task('watch', function(){
 /* default task */
 gulp.task('default', ['sass', 'watch', 'minify-css']);
 {% endhighlight %}
-13. วิธีการรัน Gulpfile ตัวนี้ ให้เปิด command แล้วใช้คำสั่ง `$ gulp` เพื่อทำการสั่งให้ gulp ทำงานตามที่เรากำหนด
+
+วิธีการรัน Gulpfile ตัวนี้ ให้เปิด command แล้วใช้คำสั่ง `$ gulp` เพื่อทำการสั่งให้ gulp ทำงานตามที่เรากำหนด
 
 ### บทความหน้าผมจะพูดถึงตัวโค๊ดว่ามันทำงานอย่างไรครับ
