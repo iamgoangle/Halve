@@ -60,7 +60,6 @@ tag:
 11. กลับมาที่ directory ของ project เราต่อ สิ่งที่เราต้องทำต่อมานั่นก็ คือ สร้างไฟล์ที่ชื่อว่า `Gulpfile.js` เพื่อกำหนด task ที่จำเป็น ตามที่ เรากำหนด Requirement ไว้
 
 12. เปิด Gulpfile.js ที่ได้สร้างไว้ และใส่ code เหล่านี้ลงไป
-
 {% highlight js %}
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
