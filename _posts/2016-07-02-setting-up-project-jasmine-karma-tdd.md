@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setting up the project to support js task runner with Gulp Sass and Minify CSS"
+title:  "ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report"
 date:   2016-06-28
 excerpt: ""
 tag:
