@@ -1,64 +1,236 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-06-24T01:13:03+07:00</updated><id>http://127.0.0.1:4000/</id><title>Teerapong Singthong</title><subtitle>Ordinary person who focusing on &#39;Development&#39;</subtitle><entry><title>เริ่มต้น Saas CSS preprocessor</title><link href="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/" rel="alternate" type="text/html" title="เริ่มต้น Saas CSS preprocessor" /><published>2016-06-23T00:00:00+07:00</published><updated>2016-06-23T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/23/get-started-with-saas-css/">&lt;h2 id=&quot;saas-&quot;&gt;Saas คืออะไร&lt;/h2&gt;
-&lt;p&gt;Saas คือ CSS Preprocessor ที่มี feature ต่างๆ ที่ช่วยให้การเขียน CSS มีความกระชับ ลดความซ้ำซ้อน
-ลดความซับซ้อนของตัว CSS ได้&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-02T21:38:40+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report</title><link href="https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd/" rel="alternate" type="text/html" title="ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report" /><published>2016-07-02T00:00:00+07:00</published><updated>2016-07-02T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd/">&lt;h2 id=&quot;karma--test-runner-jasmine--report-&quot;&gt;ติดตั้ง Karma เพื่อทำ test runner Jasmine และออก Report สวยๆเพื่อให้เข้าใจง่าย&lt;/h2&gt;
 
-&lt;h2 id=&quot;css-preprocessor&quot;&gt;อะไรคือ CSS Preprocessor?&lt;/h2&gt;
-&lt;p&gt;คือ การเขียน CSS อีกรูปแบบหนึ่ง ที่ให้เราสามารถเขียน CSS แบบ Nesting, Variables, Mixins and Operators
-ก่อน แล้วจึง processor ให้เป็น .css file&lt;/p&gt;
-
-&lt;h2 id=&quot;css-preprocessor-1&quot;&gt;ทำไมต้อง CSS Preprocessor?&lt;/h2&gt;
-&lt;p&gt;โดยปกติแล้ว CSS style ที่เราเขียนกันทุกวันนี้ มันก็โอเคอยู่แล้ว ถ้าโปรเจคเรามีขนาดเล็ก มีความซับซ้อนน้อย
-หรือ เราเทพจริงๆในการลดความซ้ำซ้อนของ selector, id, class แต่ในความเป็นจริง คือ ไม่ใช่!!
-นั่นจึงเป็นเหตุผลให้เกิดเครื่องมือ หรือมาตรฐานการเขียน css แบบ preprocessor&lt;/p&gt;
-
-&lt;h2 id=&quot;saas--features-&quot;&gt;Saas มี features อะไรบ้าง?&lt;/h2&gt;
-&lt;p&gt;อย่างที่กล่าวไป Saas ช่วยให้เราสามารถทำ Nesting, Variables, Mixins and Operators ได้ ดังนั้น มาดูกันว่า แต่ละตัว
-เขียนอย่างไร และแนวคิด หลักการทำงาน มันเป็นอย่างไร&lt;/p&gt;
-
-&lt;h3 id=&quot;nesting&quot;&gt;Nesting&lt;/h3&gt;
-&lt;p&gt;เป็นการเขียน saas code ในรูปแบบ ลำดับชั้น (Heirarchy code) ถ้าหากเราคุ้นเคยกับ HTML syntax
-การทำความเข้าใจ saas nesting คงทำได้ไม่ยาก ดังตัวอย่าง&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Saas syntax&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ปล.ผมเลือกการเขียนแบบ non-curley brackets หรือ {} อีกกา เพราะว่า มันเท่ดี :)&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;inline-block&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;block&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;6px&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;12px&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;ผลลัพธ์ เมื่อผ่านการ processor to .css&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;จะเห็นได้ว่า เราลดความซ้ำซ้อน ตอนที่เราเขียน แบบ Saas ไปได้ ด้วยการประกาศ nav เพียงจุดเดียว&lt;/p&gt;
+&lt;h6 id=&quot;pre-condition&quot;&gt;Pre-Condition&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;ควรติดตั้ง Node.JS ในเครื่องให้เรียบร้อย&lt;/li&gt;
+  &lt;li&gt;สร้าง project folder /tdd ขึ้นมา&lt;/li&gt;
+  &lt;li&gt;ไปที่ folder /tdd และใช้คำสั่ง &lt;code class=&quot;highlighter-rouge&quot;&gt;npm init&lt;/code&gt; เพื่อสร้าง npm ให้กับโปรเจคนี้&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;test&lt;/p&gt;</content><category term="css" /><category term="saas" /><category term="preprocessor" /></entry><entry><title>npm install แต่ละ option ต่างกันอย่างไร?</title><link href="http://127.0.0.1:4000/2016/06/22/what-does-npm-global-save-save-dev-means/" rel="alternate" type="text/html" title="npm install แต่ละ option ต่างกันอย่างไร?" /><published>2016-06-22T00:00:00+07:00</published><updated>2016-06-22T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/22/what does npm -global --save --save-dev means</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/22/what-does-npm-global-save-save-dev-means/">&lt;h2 id=&quot;npm-&quot;&gt;npm คืออะไร&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;ติดตั้ง Karma แบบ global&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install karma-cli -g&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ติดตั้ง Karma แบบ devDependencies&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install karma --save-dev&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ติดตั้ง Karma - Jasmine แบบ devDependencies&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install karma-jasmine --save-dev&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ติดตั้ง Chrome ให้กับ Karma&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install karma-chrome-launcher --save-dev&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;สร้างไฟล์ karma.conf.js&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;karma init karma.conf.js&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;คำสั่งข้างบน คือ การสร้าง config file สำหรับ test runner ของเรา ซึ่งเราสามารถสร้างได้เอง โดยศึกษาเพิ่มเติมที่ &lt;a href=&quot;http://karma-runner.github.io/0.12/intro/configuration.html&quot;&gt;http://karma-runner.github.io/0.12/intro/configuration.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Creating&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;karma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;karma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;karma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Answer&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prompts&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;follows&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Which&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;framework&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;want&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Hit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jasmine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Do&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;want&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Hit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Do&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;want&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;capture&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;browsers&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;automatically&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Hit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Chrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;What&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Enter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;following&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;จาก Wizard ข้างบน ส่วนสำคัญ คือ locaton ที่เรากำหนดให้ test file ในตัวอย่างนี้ คือ tests/*.test.js&lt;/p&gt;
+
+&lt;p&gt;นั่นหมายความว่า เราจะต้องสร้าง test / spec ไว้ที่ folder ดังกล่าว&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ทำการสร้างไฟล์ simple.test.js ไว้ใน folder/test&lt;/li&gt;
+  &lt;li&gt;ใส่ spec เข้าไป แล้วทำการ save file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;A suite&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;contains spec with an expectation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;รัน karma เพื่อเริ่มต้น test spec ที่เราเขียนไป
+&lt;code class=&quot;highlighter-rouge&quot;&gt;karma start karma.conf.js&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/_posts/2016-07-02 21_32_01-Command Prompt - karma  start karma.conf.js.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;karma-reporter---reference&quot;&gt;Karma Reporter - Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/browse/keyword/karma-reporter&quot;&gt;https://www.npmjs.com/browse/keyword/karma-reporter&lt;/a&gt;
+&lt;a href=&quot;https://www.npmjs.com/package/karma-spec-reporter&quot;&gt;https://www.npmjs.com/package/karma-spec-reporter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;karma---configuration&quot;&gt;Karma - Configuration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://karma-runner.github.io/0.12/intro/configuration.html&quot;&gt;http://karma-runner.github.io/0.12/intro/configuration.html&lt;/a&gt;&lt;/p&gt;</content><category term="npm" /><category term="js" /><category term="tdd" /><category term="karma" /><category term="test" /></entry><entry><title>Setting up the project to support js task runner with Gulp Sass and Minify CSS</title><link href="https://iamgoangle.github.io/2016/06/30/gulp-sass-minify-css/" rel="alternate" type="text/html" title="Setting up the project to support js task runner with Gulp Sass and Minify CSS" /><published>2016-06-30T00:00:00+07:00</published><updated>2016-06-30T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/06/30/gulp-sass-minify-css</id><content type="html" xml:base="https://iamgoangle.github.io/2016/06/30/gulp-sass-minify-css/">&lt;h2 id=&quot;gulp-&quot;&gt;Gulp คืออะไร?&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Automate and enhance your workflow&lt;/code&gt; นี่คือ คำนิยามจาก Official website &lt;a href=&quot;http://gulpjs.com/&quot;&gt;http://gulpjs.com/&lt;/a&gt;
+เท่าที่ใช้งานมา ผมมองว่ามัน คือ JavaScript Task Runner โดยใช้ความสามารถของ NodeJS มาช่วย เพื่อให้สามารถ watching เหตุการณ์ หรือ งานที่เราสนใจ และ ให้ทำสิ่งที่เรากำหนดไว้ได้&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;วันนี้จะทำอะไร?&lt;/h2&gt;
+&lt;p&gt;ผมจะใช้ความสามารถของ Gulp ทำสิ่งต่อไปนี้ให้ผม&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;ผมมีไฟล์ .scss หรือ Sass Project ของผม ซึ่งเป็น CSS Preprocessor&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ทันทีที่ผมเซฟไฟล์ใน Editor ผมอยากให้ Gulp compile .scss to .css&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;โดยที่ .css ที่ผมได้ จะต้องทำการ minify .css ด้วย&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;มาเริ่มต้นกัน&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;ทำการติดตั้ง Node.JS เพื่อให้ได้ npm (node package manager) &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;Download&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ทำการติดตั้งติด Gulp แบบ Global
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install --global gulp-cli&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ไปที่ directory ของ project เราแล้วทำการ initial npm
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm init&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ติดตั้ง Gulp ให้อยู่ใน project package devDependencies
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install gulp --save-dev&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ถึงขั้นตอนนี้เราสามารถใช้ npm และ gulp command line ได้แล้ว เพื่อให้เราสามารถใช้ความสามารถจาก คำสั่งนี้ได้อีก เราจำเป็นต้อง ติดตั้ง plugin เสริม&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เนื่องจากผมชอบใช้ Ruby Sass เพราะบางที ผมชอบ compile sass ด้วย manual cli จึงเลือกใช้ Ruby Sass เป็นเครื่องมือหลักในการ compile สำหรับโปรเจคนี้&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ติดตั้ง Ruby ไว้ในเครื่องเรา &lt;a href=&quot;http://rubyinstaller.org/&quot;&gt;Ruby Installer&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เปิด command line แล้วติดตั้ง Ruby Sass ด้วยคำสั่งนี้
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ gem install sass&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เมื่อติดตั้งเสร็จแล้ว ลองใช้คำสั่ง
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sass -v&lt;/code&gt;
+เพื่อตรวจสอบเวอร์ชั่น ของ sass&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;มาถึงขั้นตอนนี้ เราสามารถ รัน sass command ได้แล้ว โดยไม่จำเป็นต้องมี npm มาเกี่ยวข้องก็ได้ แต่เราจะเอาความสามารถ ของ gulp + sass มารวมกันแล้ว ดูข้อมูลเพิ่มเติมเกี่ยวกับ sass command ได้ที่ &lt;a href=&quot;http://sass-lang.com/install&quot;&gt;http://sass-lang.com/install&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ทำการติดตั้ง gulp-ruby-sass &lt;a href=&quot;https://github.com/sindresorhus/gulp-ruby-sass&quot;&gt;https://github.com/sindresorhus/gulp-ruby-sass&lt;/a&gt;
+&lt;a href=&quot;https://www.npmjs.com/package/gulp-ruby-sass/&quot;&gt;https://www.npmjs.com/package/gulp-ruby-sass/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install --save-dev gulp-ruby-sass&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;เพื่อให้อยู่ใน devDependencies&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;กลับมาที่ directory ของ project เราต่อ สิ่งที่เราต้องทำต่อมานั่นก็ คือ สร้างไฟล์ที่ชื่อว่า &lt;code class=&quot;highlighter-rouge&quot;&gt;Gulpfile.js&lt;/code&gt; เพื่อกำหนด task ที่จำเป็น ตามที่ เรากำหนด Requirement ไว้&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เปิด Gulpfile.js ที่ได้สร้างไว้ และใส่ code เหล่านี้ลงไป&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-ruby-sass&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mininfyCSS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-clean-css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-rename&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* create sass task */&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;sass&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;sass/*.scss&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;expanded&#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;error&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;result&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* create mininfy css task */&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;minify-css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;result/*.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mininfyCSS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;keepBreaks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;details&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;details&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;details&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;originalSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;details&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;details&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;minifiedSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;suffix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;.min&#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;dist&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* create watcher */&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;watch&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;sass/*.scss&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;sass&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//console.log(&#39;[Sass task] is done.&#39;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;result/*.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;minify-css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//console.log(&#39;[Minify CSS] task is done.&#39;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* default task */&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;default&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;sass&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;watch&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;minify-css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;วิธีการรัน Gulpfile ตัวนี้ ให้เปิด command แล้วใช้คำสั่ง &lt;code class=&quot;highlighter-rouge&quot;&gt;$ gulp&lt;/code&gt; เพื่อทำการสั่งให้ gulp ทำงานตามที่เรากำหนด&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;บทความหน้าผมจะพูดถึงตัวโค๊ดว่ามันทำงานอย่างไรครับ&lt;/h3&gt;</content><category term="gulp" /><category term="js" /><category term="sass" /><category term="minify" /><category term="css" /></entry><entry><title>Links - Frontend Programming style guide</title><link href="https://iamgoangle.github.io/2016/06/28/frontend-programming-style-guide/" rel="alternate" type="text/html" title="Links - Frontend Programming style guide" /><published>2016-06-28T00:00:00+07:00</published><updated>2016-06-28T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/06/28/frontend-programming-style-guide</id><content type="html" xml:base="https://iamgoangle.github.io/2016/06/28/frontend-programming-style-guide/">&lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Airbnb JavaScript Style Guide() {&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TH&lt;/code&gt;
+&lt;a href=&quot;https://github.com/lvarayut/javascript-style-guide/&quot;&gt;https://github.com/lvarayut/javascript-style-guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;EN&lt;/code&gt;
+&lt;a href=&quot;https://github.com/airbnb/javascript/&quot;&gt;https://github.com/airbnb/javascript/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;html---css&quot;&gt;HTML - CSS&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Airbnb CSS / Sass Styleguide&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/airbnb/css&quot;&gt;https://github.com/airbnb/css&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Google HTML CSS Style Guide&lt;/code&gt;
+&lt;a href=&quot;https://google.github.io/styleguide/htmlcssguide.xml&quot;&gt;https://google.github.io/styleguide/htmlcssguide.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;angularjs&quot;&gt;AngularJS&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/johnpapa/angular-styleguide&quot;&gt;https://github.com/johnpapa/angular-styleguide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;The content has been categorized&lt;/code&gt;
+&lt;a href=&quot;https://angularjs.zeef.com/gianluca.arbezzano#block_37269_tutorials&quot;&gt;https://angularjs.zeef.com/gianluca.arbezzano#block_37269_tutorials&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Google AngularJs Style Guide&lt;/code&gt;
+&lt;a href=&quot;https://google.github.io/styleguide/angularjs-google-style.html&quot;&gt;https://google.github.io/styleguide/angularjs-google-style.html&lt;/a&gt;&lt;/p&gt;</content><category term="guide" /><category term="best-practice" /><category term="frontend" /></entry><entry><title>npm install แต่ละ option ต่างกันอย่างไร?</title><link href="https://iamgoangle.github.io/2016/06/23/what-does-npm-global-save-save-dev-means/" rel="alternate" type="text/html" title="npm install แต่ละ option ต่างกันอย่างไร?" /><published>2016-06-23T00:00:00+07:00</published><updated>2016-06-23T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/06/23/what does npm -global --save --save-dev means</id><content type="html" xml:base="https://iamgoangle.github.io/2016/06/23/what-does-npm-global-save-save-dev-means/">&lt;h2 id=&quot;npm-&quot;&gt;npm คืออะไร&lt;/h2&gt;
 &lt;p&gt;npm คือ package manger command ที่ใช้ในการ install package, manage package ต่างๆ ที่เกี่ยวข้องกับ NodeJS ถือเป็นคำสั่งที่ให้เราเข้าถึง package ต่างๆบน repository ของ NodeJS&lt;/p&gt;
 
 &lt;h2 id=&quot;package&quot;&gt;การติดตั้ง package&lt;/h2&gt;
@@ -139,7 +311,67 @@ Ref: &lt;a href=&quot;http://stackoverflow.com/a/25092832/6495718&quot;&gt;http:
   &lt;li&gt;&lt;a href=&quot;http://blog.martroutine.com/2013/08/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A-package-js/&quot;&gt;http://blog.martroutine.com/2013/08/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A-package-js/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://nextflow.in.th/2015/better-node-js-module-install/&quot;&gt;http://nextflow.in.th/2015/better-node-js-module-install/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/25092617/npm-install-bower-using-g-vs-save-dev&quot;&gt;http://stackoverflow.com/questions/25092617/npm-install-bower-using-g-vs-save-dev&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="nodejs" /><category term="npm" /><category term="dependency" /></entry><entry><title>How to get windows product key</title><link href="http://127.0.0.1:4000/2016/06/22/how-to-get-window-product-key/" rel="alternate" type="text/html" title="How to get windows product key" /><published>2016-06-22T00:00:00+07:00</published><updated>2016-06-22T00:00:00+07:00</updated><id>http://127.0.0.1:4000/2016/06/22/how-to-get-window-product-key</id><content type="html" xml:base="http://127.0.0.1:4000/2016/06/22/how-to-get-window-product-key/">&lt;p&gt;In order to get windows product key by easily way without edit registry or somehow. There is easy way to get it by step as below.&lt;/p&gt;
+&lt;/ol&gt;</content><category term="nodejs" /><category term="npm" /><category term="dependency" /></entry><entry><title>เริ่มต้น Saas CSS preprocessor</title><link href="https://iamgoangle.github.io/2016/06/23/get-started-with-saas-css/" rel="alternate" type="text/html" title="เริ่มต้น Saas CSS preprocessor" /><published>2016-06-23T00:00:00+07:00</published><updated>2016-06-23T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/06/23/get-started-with-saas-css</id><content type="html" xml:base="https://iamgoangle.github.io/2016/06/23/get-started-with-saas-css/">&lt;h2 id=&quot;saas-&quot;&gt;Saas คืออะไร&lt;/h2&gt;
+&lt;p&gt;Saas คือ CSS Preprocessor ที่มี feature ต่างๆ ที่ช่วยให้การเขียน CSS มีความกระชับ ลดความซ้ำซ้อน
+ลดความซับซ้อนของตัว CSS ได้&lt;/p&gt;
+
+&lt;h2 id=&quot;css-preprocessor&quot;&gt;อะไรคือ CSS Preprocessor?&lt;/h2&gt;
+&lt;p&gt;คือ การเขียน CSS อีกรูปแบบหนึ่ง ที่ให้เราสามารถเขียน CSS แบบ Nesting, Variables, Mixins and Operators
+ก่อน แล้วจึง processor ให้เป็น .css file&lt;/p&gt;
+
+&lt;h2 id=&quot;css-preprocessor-1&quot;&gt;ทำไมต้อง CSS Preprocessor?&lt;/h2&gt;
+&lt;p&gt;โดยปกติแล้ว CSS style ที่เราเขียนกันทุกวันนี้ มันก็โอเคอยู่แล้ว ถ้าโปรเจคเรามีขนาดเล็ก มีความซับซ้อนน้อย
+หรือ เราเทพจริงๆในการลดความซ้ำซ้อนของ selector, id, class แต่ในความเป็นจริง คือ ไม่ใช่!!
+นั่นจึงเป็นเหตุผลให้เกิดเครื่องมือ หรือมาตรฐานการเขียน css แบบ preprocessor&lt;/p&gt;
+
+&lt;h2 id=&quot;saas--features-&quot;&gt;Saas มี features อะไรบ้าง?&lt;/h2&gt;
+&lt;p&gt;อย่างที่กล่าวไป Saas ช่วยให้เราสามารถทำ Nesting, Variables, Mixins and Operators ได้ ดังนั้น มาดูกันว่า แต่ละตัว
+เขียนอย่างไร และแนวคิด หลักการทำงาน มันเป็นอย่างไร&lt;/p&gt;
+
+&lt;h3 id=&quot;nesting&quot;&gt;Nesting&lt;/h3&gt;
+&lt;p&gt;เป็นการเขียน saas code ในรูปแบบ ลำดับชั้น (Heirarchy code) ถ้าหากเราคุ้นเคยกับ HTML syntax
+การทำความเข้าใจ saas nesting คงทำได้ไม่ยาก ดังตัวอย่าง&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Saas syntax&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ปล.ผมเลือกการเขียนแบบ non-curley brackets หรือ {} อีกกา เพราะว่า มันเท่ดี :)&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;inline-block&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;block&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;6px&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;12px&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;ผลลัพธ์ เมื่อผ่านการ processor to .css&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;จะเห็นได้ว่า เราลดความซ้ำซ้อน ตอนที่เราเขียน แบบ Saas ไปได้ ด้วยการประกาศ nav เพียงจุดเดียว&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;test&lt;/p&gt;</content><category term="css" /><category term="saas" /><category term="preprocessor" /></entry><entry><title>How to get windows product key</title><link href="https://iamgoangle.github.io/2016/06/22/how-to-get-window-product-key/" rel="alternate" type="text/html" title="How to get windows product key" /><published>2016-06-22T00:00:00+07:00</published><updated>2016-06-22T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/06/22/how-to-get-window-product-key</id><content type="html" xml:base="https://iamgoangle.github.io/2016/06/22/how-to-get-window-product-key/">&lt;p&gt;In order to get windows product key by easily way without edit registry or somehow. There is easy way to get it by step as below.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Open your text editor&lt;/li&gt;
