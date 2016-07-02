@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting up the project to support js task runner with Gulp Sass and Minify CSS"
-date:   2016-06-28
+date:   2016-06-30
 excerpt: ""
 tag:
 - gulp

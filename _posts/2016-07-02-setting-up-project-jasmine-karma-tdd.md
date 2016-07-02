@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report"
-date:   2016-06-28
+date:   2016-07-02
 excerpt: ""
 tag:
 - npm

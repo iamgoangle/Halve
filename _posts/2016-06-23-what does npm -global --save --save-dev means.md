@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "npm install แต่ละ option ต่างกันอย่างไร?"
-date:   2016-06-22
+date:   2016-06-23
 excerpt: ""
 tag:
 - nodejs
