@@ -75,7 +75,7 @@ tag:
 8. รัน karma เพื่อเริ่มต้น test spec ที่เราเขียนไป
 `karma start karma.conf.js`
 
-![alt text](https://raw.githubusercontent.com/iamgoangle/iamgoangle.github.com/master/images/_posts/2016-07-02%2021_32_01-Command%20Prompt%20-%20karma%20%20start%20karma.conf.js.png "result run karma")
+	![alt text](https://raw.githubusercontent.com/iamgoangle/iamgoangle.github.com/master/images/_posts/2016-07-02%2021_32_01-Command%20Prompt%20-%20karma%20%20start%20karma.conf.js.png "result run karma")
 
 ## Karma Reporter - Reference
 [https://www.npmjs.com/browse/keyword/karma-reporter](https://www.npmjs.com/browse/keyword/karma-reporter)
