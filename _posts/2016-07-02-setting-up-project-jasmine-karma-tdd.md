@@ -74,6 +74,7 @@ describe("A suite", function() {
 8. รัน karma เพื่อเริ่มต้น test spec ที่เราเขียนไป
 `karma start karma.conf.js`
 
+
 ![alt text](http://127.0.0.1:4000/images/_posts/2016-07-02 21_32_01-Command Prompt - karma  start karma.conf.js.png "Logo Title Text 1")
 
 ## Karma Reporter - Reference
