@@ -81,6 +81,9 @@ describe("A suite", function() {
 
 	![alt text](https://raw.githubusercontent.com/iamgoangle/iamgoangle.github.com/master/images/_posts/2016-07-02%2021_32_01-Command%20Prompt%20-%20karma%20%20start%20karma.conf.js.png "result run karma")
 
+9. จะเห็นได้ว่า report ไม่สวยเท่าไหร่ ให้ติดตั้ง reporter ตัวนี้ดู
+	`npm install karma-spec-reporter --save-dev`
+
 ## Karma Reporter - Reference
 [https://www.npmjs.com/browse/keyword/karma-reporter](https://www.npmjs.com/browse/keyword/karma-reporter)
 [https://www.npmjs.com/package/karma-spec-reporter](https://www.npmjs.com/package/karma-spec-reporter)
