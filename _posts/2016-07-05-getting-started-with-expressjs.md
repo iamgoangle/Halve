@@ -6,9 +6,7 @@ excerpt: ""
 tag:
 - nodejs
 - npm
-- expressjs
-- jade
-published: true
+- express
 ---
 
 ## เริ่มต้นสร้าง Web Application project กับ Express.JS
