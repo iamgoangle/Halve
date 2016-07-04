@@ -34,7 +34,14 @@ tag:
 	single-page-application ได้ ทำ page routing ได้ จำลองตัวเองเป็น web server ได้ และอื่นๆที่จำเป็นสำหรับการพัฒนา
 	เวปแอพพลิเคชันขั้นพื้นฐาน
 
+	ติดต่อ Database ได้ ทำ REST APIs ได้ เทียบเท่าภาษา framework ตัวอื่นๆ หรือ server-side-script ตัวอื่นได้
+
 ## ลืมพวก PHP, ASP.NET, JSP, หรือ server-side-script ไปก่อน
 	Express.JS ให้เราเขียนเวปแอพพลิเคชันด้วยภาษา JavaScript
 
-## เริ่มต้นติดตั้ง	
+## เริ่มต้นติดตั้ง
+	1. ไปที่ working directory ของคุณ
+	2. `npm init` เพื่อสร้าง ไฟล์ package.json จากนั้นกรอกข้อมูล package ของคุณ
+	3. ติดตั้ง express แบบ global และ devDependencies
+		`npm install express -g`
+		`npm install express --save-dev`
