@@ -45,3 +45,7 @@ tag:
 	3. ติดตั้ง express แบบ global และ devDependencies
 		`npm install express -g`
 		`npm install express --save-dev`
+
+## Generate folder มาตรฐาน (เราไม่จำเป็นต้องวางโครงสร้างเวปแบบนี้ก็ได้ครับ)
+	`npm install express-generator -g`
+	`npm install express-generator --save-dev`
