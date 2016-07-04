@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-03T20:57:40+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report</title><link href="https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd/" rel="alternate" type="text/html" title="ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report" /><published>2016-07-02T00:00:00+07:00</published><updated>2016-07-02T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd/">&lt;h2 id=&quot;karma--test-runner-jasmine--report-&quot;&gt;ติดตั้ง Karma เพื่อทำ test runner Jasmine และออก Report สวยๆเพื่อให้เข้าใจง่าย&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-05T01:21:09+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Getting started with Express.JS</title><link href="https://iamgoangle.github.io/2016/07/05/getting-started-with-express-js/" rel="alternate" type="text/html" title="Getting started with Express.JS" /><published>2016-07-05T00:00:00+07:00</published><updated>2016-07-05T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/05/getting-started-with-express-js</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/05/getting-started-with-express-js/">&lt;h2 id=&quot;web-application-project--expressjs&quot;&gt;เริ่มต้นสร้าง Web Application project กับ Express.JS&lt;/h2&gt;
+&lt;p&gt;เราทราบกันดีว่า Node.JS ได้เข้ามามีบทบาทการสร้างเว็พแอพพลิเคชันในรูปแบบใหม่เป็นอย่างมาก
+จากโลกเดิมๆของการพัฒนา เราให้ความสำคัญกับคำนิยาม client-request-server และในทางกลับกัน
+server-reponse-client นั่นหมายความว่า client จะต้องร้องขอก่อนเสมอ&lt;/p&gt;
+
+&lt;p&gt;แต่ Node.JS ไม่มองเช่นนั้น ลองสมมุติดูว่าถ้าเราเอา JS ไปรันบน server ได้ แล้วให้มันส่งผลลัพธ์มาที่
+client โดยที่ client ไม่ต้องร้องขอ ด้วยการ interval request หล่ะ จะเกิดอะไรขึ้น? นั่น คือ เราสามารถสร้าง
+Realtime web based application ได้&lt;/p&gt;
+
+&lt;p&gt;อย่าลืมว่า JS เป็น single-thread ดังนั้น มันเร็ว และไม่เกิด blocking I/O&lt;/p&gt;
+
+&lt;p&gt;และที่ผมกล่าวมาเป็นเพียงหนึ่งใน ในความสามารถของ Node.JS เท่านั้น ซึ่งเราสามารถค้นหา package ได้มากมาย
+ในเวป &lt;a href=&quot;https://www.npmjs.org/&quot;&gt;https://www.npmjs.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ดังนั้นสรุปได้ว่า Node.JS ได้เปลี่ยนนิยามโลก JavaScript ใหม่ ไม่ใช่การใช้ทรัพยากรบนเครื่อง client เพื่อทำงาน
+แต่มัน คือ การให้ server สามารถเข้าใจ JS ได้ และทำงานได้&lt;/p&gt;
+
+&lt;p&gt;หรือกล่าวได้ว่า Node.JS คือ platform นึง ระบบนึงที่อำนวยความสะดวกในการทำ web application ด้วยภาษา JS&lt;/p&gt;
+
+&lt;h2 id=&quot;expressjs&quot;&gt;Express.JS&lt;/h2&gt;
+&lt;p&gt;ผมมองว่าเป็นเครื่องมือนึง ที่ช่วยให้เราทำเวปแอพพลิเคชั่น ที่รันอยู่บนพื้นฐาน Node.JS ได้อย่างสะดวก โดยสามารถทำ
+single-page-application ได้ ทำ page routing ได้ จำลองตัวเองเป็น web server ได้ และอื่นๆที่จำเป็นสำหรับการพัฒนา
+เวปแอพพลิเคชันขั้นพื้นฐาน&lt;/p&gt;
+
+&lt;p&gt;ติดต่อ Database ได้ ทำ REST APIs ได้ เทียบเท่าภาษา framework ตัวอื่นๆ หรือ server-side-script ตัวอื่นได้&lt;/p&gt;
+
+&lt;h2 id=&quot;php-aspnet-jsp--server-side-script-&quot;&gt;ลืมพวก PHP, ASP.NET, JSP, หรือ server-side-script ไปก่อน&lt;/h2&gt;
+&lt;p&gt;Express.JS ให้เราเขียนเวปแอพพลิเคชันด้วยภาษา JavaScript&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;เริ่มต้นติดตั้ง&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;ไปที่ working directory ของคุณ&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm init&lt;/code&gt; เพื่อสร้าง ไฟล์ package.json จากนั้นกรอกข้อมูล package ของคุณ&lt;/li&gt;
+  &lt;li&gt;ติดตั้ง express แบบ global และ devDependencies
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express -g&lt;/code&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express --save-dev&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;generate-folder--&quot;&gt;Generate folder มาตรฐาน (เราไม่จำเป็นต้องวางโครงสร้างเวปแบบนี้ก็ได้ครับ)&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express-generator -g&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express-generator --save-dev&lt;/code&gt;&lt;/p&gt;</content><category term="nodejs" /><category term="npm" /><category term="expressjs" /><category term="jade" /></entry><entry><title>ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report</title><link href="https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd/" rel="alternate" type="text/html" title="ติดตั้ง Karma เพื่อทำ TDD ด้วย Jasmine และ ออก report" /><published>2016-07-02T00:00:00+07:00</published><updated>2016-07-02T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/02/setting-up-project-jasmine-karma-tdd/">&lt;h2 id=&quot;karma--test-runner-jasmine--report-&quot;&gt;ติดตั้ง Karma เพื่อทำ test runner Jasmine และออก Report สวยๆเพื่อให้เข้าใจง่าย&lt;/h2&gt;
 
 &lt;h6 id=&quot;pre-condition&quot;&gt;Pre-Condition&lt;/h6&gt;
 &lt;ul&gt;
