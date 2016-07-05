@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting started with ExpressJS"
+title:  "ExpressJS"
 date:   2016-07-05
 excerpt: ""
 tag:
