@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Introduction to ExpressJS"
+title:  "เริ่มต้นสร้าง Web Application project ด้วย Express.JS"
 date:   2016-07-05
 excerpt: ""
 tag:
 - nodejs
 - npm
+- express
 ---
 
 ## เริ่มต้นสร้าง Web Application project กับ Express.JS
