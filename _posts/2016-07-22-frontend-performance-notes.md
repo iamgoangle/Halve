@@ -74,7 +74,7 @@ Ref: [http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/](http://
 สิ่งนี้เรียกว่า `Browser render-blocking-resources` แต่ก็อย่างที่บอกครับ โลกของการทำให้ Performance ในส่วนของ Frontend ดีขึ้น ไม่ใช่แค่ แก้เรื่อง Browser render-blocking-resources ครับ
 
 ## Solutions
-1. Browser render blocking resources
+1. Prevent the browser render blocking resources
  [CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en) [JS](https://developers.google.com/speed/docs/insights/BlockingJS)
 
 2. Make Fewer Requests
