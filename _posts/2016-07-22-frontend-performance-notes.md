@@ -53,7 +53,8 @@ Ref: [http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/](http://
 
 2. Parsing HTML และแปลงเป็น DOM เพื่อให้ ออกมาอยู่ในรูปแบบ Tree Structure หรือ โครงสร้างต้นไม้
 
-3. มาถึงจุดสำคัญละครับ !!! ในจุดนี้เองถ้า Rendering Engine พบว่า มี External resource เช่น <script src=""> หรือ <link rel=""> หรือสคริปจำพวกการโหลดไฟล์ ตัว Rendering Engine จะหยุด หยุดจริงๆครับ และทำการ Execute ตีความจนเสร็จ
+3. มาถึงจุดสำคัญละครับ !!! ในจุดนี้เองถ้า Rendering Engine พบว่า มี External resource
+เช่น `<script src="">` หรือ `<link rel="">` หรือสคริปจำพวกการโหลดไฟล์ ตัว Rendering Engine จะหยุด หยุดจริงๆครับ และทำการ Execute ตีความจนเสร็จ
 
 4. เมื่อเสร็จสิ้นกระบวนการเกี่ยวกับ Javascript, Stylesheet ตัว Rendering engine จะทำการสร้าง Render Tree
 
