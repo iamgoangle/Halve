@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-05T01:52:12+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Getting started with ExpressJS</title><link href="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/" rel="alternate" type="text/html" title="Getting started with ExpressJS" /><published>2016-07-05T00:00:00+07:00</published><updated>2016-07-05T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/">&lt;h2 id=&quot;web-application-project--expressjs&quot;&gt;เริ่มต้นสร้าง Web Application project กับ Express.JS&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-23T00:03:46+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Frontend Engineer - Thinking about performance</title><link href="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/" rel="alternate" type="text/html" title="Frontend Engineer - Thinking about performance" /><published>2016-07-22T00:00:00+07:00</published><updated>2016-07-22T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/22/frontend-performance-notes</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/">&lt;h2 id=&quot;performance-&quot;&gt;เราให้ความสำคัญกับ Performance มากแค่ไหน?&lt;/h2&gt;
+&lt;p&gt;ทุกวันนี้อัตราความเร็วเครื่องคอมพิวเตอร์ หรือ มือถือ รวมไปถึง Smart devices ต่างๆที่สามารถเชื่อมต่ออินเตอร์เนตได้
+กำลังแข่งขันกันในเรื่องความเร็วในการประมวลผล แน่นอนว่าความเร็วที่แข่งขันกันอยู่นั้น มันก็เป็นผลดีต่อผู้บริโภค
+ที่สามารถมีตัวเลือกมากมาย&lt;/p&gt;
+
+&lt;p&gt;ผู้บริโภคโดยส่วนใหญ่ใช้อุปกรณ์เหล่านี้ในการเข้าเวปไซต์ ใช่ไหมครับ? คำตอบ คือ ใช่ และเป็นที่แน่นอนว่า
+การใช้ทรัพยากรของเครื่อง เพื่อเปิดสักเวปไซต์นึงนี่ มันกินทรัพยากรไม่มากหรอก&lt;/p&gt;
+
+&lt;p&gt;มันก็จริง! แต่นั่นมันอาจทำให้เราไม่ได้ใส่ใจกับเรื่อง Performance เพราะ เราคิดไปเองว่าคอมพิวเตอร์เดียวนี้มันแรง&lt;/p&gt;
+
+&lt;p&gt;แต่อย่าลืมว่า แม้ว่าเครื่องของผู้ใช้จะแรงเพียงใด แต่การออกแบบ Frontend ที่ไม่ได้ใส่ใจกับเรื่อง Performance
+มันก็ตอบสนองผู้ใช้ช้าอยู่ดี และรวมไปถึง User Experience ที่แย่อีกด้วย&lt;/p&gt;
+
+&lt;h2 id=&quot;frontend-optimization-&quot;&gt;ถ้าเราจะเริ่มต้น Frontend Optimization เราควรมองปัจจัยอะไรบ้าง?&lt;/h2&gt;
+&lt;p&gt;มีคำที่กล่าวว่า “Personal experience all tell us the fast is best” สิ่งที่เราควรพิจารณา ได้แก
+่
+1. ความเร็วในการแสดงผล&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;ความเร็วในการตอบสนอง&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;การทำงานเบื้องหน้า เบื้องหลังต้องดีเยี่ยม&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ลด HTTP Request ที่ไม่จำเป็น&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เข้าใจธรรมชาติของ Web Browser&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;browser-&quot;&gt;เข้าใจธรรมชาติของ Browser กันแบบคร่าวๆกันก่อน&lt;/h2&gt;
+&lt;p&gt;ก่อนที่ Web Browser สักหนึ่งตัวจะแสดงผล HTML ที่เราเขียน ออกมาบนหน้าจอ Browser มีสิ่งที่เรียกว่า
+Browser Rendering Engine หรือ มันคือเครื่องมือที่ Browser ใช้ตีความ และทำความเข้าใจ HTML ที่เขียนไว้&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Different browsers use different rendering engines: Internet Explorer uses Trident, Firefox uses Gecko, Safari uses WebKit. Chrome and Opera (from version 15) use Blink, a fork of WebKit.
+
+WebKit is an open source rendering engine which started as an engine for the Linux platform and was modified by Apple to support Mac and Windows. See webkit.org for more details.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ref: &lt;a href=&quot;http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/&quot;&gt;http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;คราวนี้มาดูขั้นตอนการทำงานคร่าวๆกัน&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rendering engine ทำการรับ content html ที่ download มาผ่านทาง Network Layer จากนั้น ทำการแบ่งข้อมูลออกเป็นก้อนๆ
+ตีความว่า ก้อนละ 8kb มองเป็นเค้กก้อนละ 8kb ก็ได้&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Parsing HTML และแปลงเป็น DOM เพื่อให้ ออกมาอยู่ในรูปแบบ Tree Structure หรือ โครงสร้างต้นไม้&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;มาถึงจุดสำคัญละครับ !!! ในจุดนี้เองถ้า Rendering Engine พบว่า มี External resource เช่น &lt;script src=&quot;&quot;&gt; หรือ &lt;link rel=&quot;&quot; /&gt; หรือสคริปจำพวกการโหลดไฟล์ ตัว Rendering Engine จะหยุด หยุดจริงๆครับ และทำการ Execute ตีความจนเสร็จ&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เมื่อเสร็จสิ้นกระบวนการเกี่ยวกับ Javascript, Stylesheet ตัว Rendering engine จะทำการสร้าง Render Tree&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;จากนั้นก็ Parsing html to DOM ไปเรื่อยๆจนเสร็จ&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ยังไม่จบ!! Rendering Engine จะเข้าสู่กระบวนการต่อ ที่เรียกว่า Layout process เพื่อบอก Browser ว่า element ต่อไปนี้ ควรอยู่จัดใดของหน้าเว็ป&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;และกระบวนการสุดท้าย ก็คือ นำ Render Tree มาผนวกกับ Layout process เพื่อรวม Style และแสดงผลบนหน้าจออย่างสวยงาม&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ref: &lt;a href=&quot;http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/&quot;&gt;http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/&lt;/a&gt;
+&lt;a href=&quot;https://armno.github.io/2016/01/28/how-web-browsers-work&quot;&gt;https://armno.github.io/2016/01/28/how-web-browsers-work&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;และแล้วเราก็เจอปัญหาจนได้&lt;/h2&gt;
+&lt;p&gt;จากการทำงานคร่าวๆของ Browser เราจับใจความได้ว่า มันทำงาน แบบ Synchronously execute นี่หว่า แม่งศัพท์เทคนิคอีกละ !! ก็คือ มันหยุดรอครับ เมื่อเจอ script เกี่ยวกับ JavaScript, CSS แล้วจะเกิดอะไรขึ้นที่หน้าจอของผู้ใช้ นั่นก็คือ หน้าขาวๆ นิ่งๆ ที่รอโหลด&lt;/p&gt;
+
+&lt;p&gt;สิ่งนี้เรียกว่า &lt;code class=&quot;highlighter-rouge&quot;&gt;Browser render-blocking-resources&lt;/code&gt; แต่ก็อย่างที่บอกครับ โลกของการทำให้ Performance ในส่วนของ Frontend ดีขึ้น ไม่ใช่แค่ แก้เรื่อง Browser render-blocking-resources ครับ&lt;/p&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Browser render blocking resources
+ &lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en&quot;&gt;CSS&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/docs/insights/BlockingJS&quot;&gt;JS&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make Fewer Requests&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Maximising parallelisation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ใช้ CDN (Content Delivery Network) แทนการอ้างสคริปภายใต้ domain web server ของเรา&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;HTTP requests and DNS lookups&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;DNS prefetching&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make JavaScript Asynchronous&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make Inline CSS/Javascript เท่าที่จำเป็น เฉพาะส่วนที่ critical กับผู้ใช้จริงๆ&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Minify HTML/CSS/JS&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;RESTFul APIs need to be only return minimal value via header instead body&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><category term="performance" /><category term="browser" /><category term="javascript" /></entry><entry><title>Getting started with ExpressJS</title><link href="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/" rel="alternate" type="text/html" title="Getting started with ExpressJS" /><published>2016-07-05T00:00:00+07:00</published><updated>2016-07-05T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/">&lt;h2 id=&quot;web-application-project--expressjs&quot;&gt;เริ่มต้นสร้าง Web Application project กับ Express.JS&lt;/h2&gt;
 &lt;p&gt;เราทราบกันดีว่า Node.JS ได้เข้ามามีบทบาทการสร้างเว็พแอพพลิเคชันในรูปแบบใหม่เป็นอย่างมาก
 จากโลกเดิมๆของการพัฒนา เราให้ความสำคัญกับคำนิยาม client-request-server และในทางกลับกัน
 server-reponse-client นั่นหมายความว่า client จะต้องร้องขอก่อนเสมอ&lt;/p&gt;
