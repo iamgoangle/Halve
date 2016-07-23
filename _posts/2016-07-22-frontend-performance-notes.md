@@ -74,23 +74,40 @@ Ref: [http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/](http://
 สิ่งนี้เรียกว่า `Browser render-blocking-resources` แต่ก็อย่างที่บอกครับ โลกของการทำให้ Performance ในส่วนของ Frontend ดีขึ้น ไม่ใช่แค่ แก้เรื่อง Browser render-blocking-resources ครับ
 
 ## Solutions
+สำหรับเนื้อหาตรงนี้ ผมได้รวบรวมศัพท์เทคนิค (เผื่อเอาไป Search google หาข้อมูลเพิ่มเติม) สำหรับการเพิ่มประสิทธิภาพเพื่อช่วยให้ Frontend ทำงานได้ดียิ่งขึ้น โดยแบ่งออกเป็นหัวข้อต่างๆ ดังนี้
+
+### Programming Technique
 1. Prevent the browser render blocking resources
  [CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en) [JS](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-2. Make Fewer Requests
+2. JavaScript Uglify/Minify
 
-3. Maximising parallelisation
+3. CSS Uglify/Minify
 
-4. ใช้ CDN (Content Delivery Network) แทนการอ้างสคริปภายใต้ domain web server ของเรา
+4. Make inline css or javascript
 
-5. HTTP requests and DNS lookups
+5. RESTFul APIs only return minimal value via header instead body
 
-6. DNS prefetching
+6. Asynchronous loading the assets
 
-7. Make JavaScript Asynchronous
+### Network
+7. Make Fewer Requests
 
-7. Make Inline CSS/Javascript เท่าที่จำเป็น เฉพาะส่วนที่ critical กับผู้ใช้จริงๆ
+8. Maximising parallelisation / Parallel Downloads Across Domains
 
-8. Minify HTML/CSS/JS
+9. ใช้ CDN (Content Delivery Network) แทนการอ้างสคริปภายใต้ domain web server ของเรา
 
-9. RESTFul APIs need to be only return minimal value via header instead body
+10. HTTP requests and DNS lookups
+
+11. DNS prefetching
+
+### Image / Font
+1. Lossless optimisation
+
+2. Correct image dimension
+
+3. Remove unused assets / Audit and Remove
+
+4. Using the right file image
+
+และนี่เป็นเพียงตัวอย่างคร่าวๆ ที่เหมือนเป็นเชคลิสต์ ทุกครั้งในการเริ่มต้นพัฒนา Frontend ในบทความหน้าผมจะเริ่มเจาะไปทีละตัวครับ

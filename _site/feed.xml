@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-23T00:31:26+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Frontend Engineer - Thinking about performance</title><link href="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/" rel="alternate" type="text/html" title="Frontend Engineer - Thinking about performance" /><published>2016-07-22T00:00:00+07:00</published><updated>2016-07-22T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/22/frontend-performance-notes</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/">&lt;h2 id=&quot;performance-&quot;&gt;เราให้ความสำคัญกับ Performance มากแค่ไหน?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-23T23:07:22+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Frontend Engineer - Thinking about performance</title><link href="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/" rel="alternate" type="text/html" title="Frontend Engineer - Thinking about performance" /><published>2016-07-22T00:00:00+07:00</published><updated>2016-07-22T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/22/frontend-performance-notes</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/">&lt;h2 id=&quot;performance-&quot;&gt;เราให้ความสำคัญกับ Performance มากแค่ไหน?&lt;/h2&gt;
 &lt;p&gt;ทุกวันนี้อัตราความเร็วเครื่องคอมพิวเตอร์ หรือ มือถือ รวมไปถึง Smart devices ต่างๆที่สามารถเชื่อมต่ออินเตอร์เนตได้
 กำลังแข่งขันกันในเรื่องความเร็วในการประมวลผล แน่นอนว่าความเร็วที่แข่งขันกันอยู่นั้น มันก็เป็นผลดีต่อผู้บริโภค
 ที่สามารถมีตัวเลือกมากมาย&lt;/p&gt;
@@ -81,16 +81,38 @@ WebKit is an open source rendering engine which started as an engine for the Lin
 &lt;p&gt;สิ่งนี้เรียกว่า &lt;code class=&quot;highlighter-rouge&quot;&gt;Browser render-blocking-resources&lt;/code&gt; แต่ก็อย่างที่บอกครับ โลกของการทำให้ Performance ในส่วนของ Frontend ดีขึ้น ไม่ใช่แค่ แก้เรื่อง Browser render-blocking-resources ครับ&lt;/p&gt;
 
 &lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+&lt;p&gt;สำหรับเนื้อหาตรงนี้ ผมได้รวบรวมศัพท์เทคนิค (เผื่อเอาไป Search google หาข้อมูลเพิ่มเติม) สำหรับการเพิ่มประสิทธิภาพเพื่อช่วยให้ Frontend ทำงานได้ดียิ่งขึ้น โดยแบ่งออกเป็นหัวข้อต่างๆ ดังนี้&lt;/p&gt;
+
+&lt;h3 id=&quot;programming-technique&quot;&gt;Programming Technique&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Prevent the browser render blocking resources
  &lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en&quot;&gt;CSS&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/docs/insights/BlockingJS&quot;&gt;JS&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
+    &lt;p&gt;JavaScript Uglify/Minify&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CSS Uglify/Minify&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make inline css or javascript&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;RESTFul APIs only return minimal value via header instead body&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Asynchronous loading the assets&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;network&quot;&gt;Network&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
     &lt;p&gt;Make Fewer Requests&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Maximising parallelisation&lt;/p&gt;
+    &lt;p&gt;Maximising parallelisation / Parallel Downloads Across Domains&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;ใช้ CDN (Content Delivery Network) แทนการอ้างสคริปภายใต้ domain web server ของเรา&lt;/p&gt;
@@ -101,19 +123,25 @@ WebKit is an open source rendering engine which started as an engine for the Lin
   &lt;li&gt;
     &lt;p&gt;DNS prefetching&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;image--font&quot;&gt;Image / Font&lt;/h3&gt;
+&lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Make JavaScript Asynchronous&lt;/p&gt;
+    &lt;p&gt;Lossless optimisation&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Make Inline CSS/Javascript เท่าที่จำเป็น เฉพาะส่วนที่ critical กับผู้ใช้จริงๆ&lt;/p&gt;
+    &lt;p&gt;Correct image dimension&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Minify HTML/CSS/JS&lt;/p&gt;
+    &lt;p&gt;Remove unused assets / Audit and Remove&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;RESTFul APIs need to be only return minimal value via header instead body&lt;/p&gt;
+    &lt;p&gt;Using the right file image&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><category term="performance" /><category term="browser" /><category term="javascript" /></entry><entry><title>เริ่มต้นสร้าง Web Application project ด้วย Express.JS</title><link href="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/" rel="alternate" type="text/html" title="เริ่มต้นสร้าง Web Application project ด้วย Express.JS" /><published>2016-07-05T00:00:00+07:00</published><updated>2016-07-05T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/">&lt;h2 id=&quot;web-application-project--expressjs&quot;&gt;เริ่มต้นสร้าง Web Application project กับ Express.JS&lt;/h2&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;และนี่เป็นเพียงตัวอย่างคร่าวๆ ที่เหมือนเป็นเชคลิสต์ ทุกครั้งในการเริ่มต้นพัฒนา Frontend ในบทความหน้าผมจะเริ่มเจาะไปทีละตัวครับ&lt;/p&gt;</content><category term="performance" /><category term="browser" /><category term="javascript" /></entry><entry><title>เริ่มต้นสร้าง Web Application project ด้วย Express.JS</title><link href="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/" rel="alternate" type="text/html" title="เริ่มต้นสร้าง Web Application project ด้วย Express.JS" /><published>2016-07-05T00:00:00+07:00</published><updated>2016-07-05T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/05/getting-started-with-expressjs/">&lt;h2 id=&quot;web-application-project--expressjs&quot;&gt;เริ่มต้นสร้าง Web Application project กับ Express.JS&lt;/h2&gt;
 &lt;p&gt;เราทราบกันดีว่า Node.JS ได้เข้ามามีบทบาทการสร้างเว็พแอพพลิเคชันในรูปแบบใหม่เป็นอย่างมาก
 จากโลกเดิมๆของการพัฒนา เราให้ความสำคัญกับคำนิยาม client-request-server และในทางกลับกัน
 server-reponse-client นั่นหมายความว่า client จะต้องร้องขอก่อนเสมอ&lt;/p&gt;
