@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-23T23:07:22+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Frontend Engineer - Thinking about performance</title><link href="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/" rel="alternate" type="text/html" title="Frontend Engineer - Thinking about performance" /><published>2016-07-22T00:00:00+07:00</published><updated>2016-07-22T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/22/frontend-performance-notes</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/">&lt;h2 id=&quot;performance-&quot;&gt;เราให้ความสำคัญกับ Performance มากแค่ไหน?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://iamgoangle.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://iamgoangle.github.io/" rel="alternate" type="text/html" /><updated>2016-07-24T02:25:56+07:00</updated><id>https://iamgoangle.github.io/</id><title>Teerapong Singthong</title><subtitle>Because i&#39;m just an ordinary person who focused on &#39;Development&#39;</subtitle><entry><title>Frontend Engineer - Thinking about performance</title><link href="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/" rel="alternate" type="text/html" title="Frontend Engineer - Thinking about performance" /><published>2016-07-22T00:00:00+07:00</published><updated>2016-07-22T00:00:00+07:00</updated><id>https://iamgoangle.github.io/2016/07/22/frontend-performance-notes</id><content type="html" xml:base="https://iamgoangle.github.io/2016/07/22/frontend-performance-notes/">&lt;h2 id=&quot;performance-&quot;&gt;เราให้ความสำคัญกับ Performance มากแค่ไหน?&lt;/h2&gt;
 &lt;p&gt;ทุกวันนี้อัตราความเร็วเครื่องคอมพิวเตอร์ หรือ มือถือ รวมไปถึง Smart devices ต่างๆที่สามารถเชื่อมต่ออินเตอร์เนตได้
 กำลังแข่งขันกันในเรื่องความเร็วในการประมวลผล แน่นอนว่าความเร็วที่แข่งขันกันอยู่นั้น มันก็เป็นผลดีต่อผู้บริโภค
 ที่สามารถมีตัวเลือกมากมาย&lt;/p&gt;
@@ -84,13 +84,41 @@ WebKit is an open source rendering engine which started as an engine for the Lin
 &lt;p&gt;สำหรับเนื้อหาตรงนี้ ผมได้รวบรวมศัพท์เทคนิค (เผื่อเอาไป Search google หาข้อมูลเพิ่มเติม) สำหรับการเพิ่มประสิทธิภาพเพื่อช่วยให้ Frontend ทำงานได้ดียิ่งขึ้น โดยแบ่งออกเป็นหัวข้อต่างๆ ดังนี้&lt;/p&gt;
 
 &lt;h3 id=&quot;programming-technique&quot;&gt;Programming Technique&lt;/h3&gt;
+
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Prevent the browser render blocking resources
- &lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en&quot;&gt;CSS&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/docs/insights/BlockingJS&quot;&gt;JS&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;Prevent the browser render blocking resources&lt;/p&gt;
+
+    &lt;p&gt;Browser จะหยุดรอ ให้ JS/CSS พวกนี้ทำงานเสร็จก่อน ถึงจะทำการ Render page ได้ นั่นหมายความว่า จะเกิดเหตุการณ์ หน้าขาวเนื่องจากรอโหลด และทำให้ผู้ใช้ต้องรอ&lt;/p&gt;
+
+    &lt;p&gt;งั้นลองแก้ไขปัญหาแบบง่ายด้วย 2 วิธีนี้ดู
+ - Inline JavaScript/CSS เฉพาะส่วนที่อยากให้แสดงเร็วๆ ทำงานทันที
+ - Asynchronous loading js file แต่ต้องยอมรับว่าการใช้เทคนิคนี้ มันจะทำให้ Page render เลยใช่ไหมครับ แต่จะพบว่า Style มีจุดบกพร่องในการแสดงผล เนื้องจาก Style ถูกโหลดมาทีหลัง&lt;/p&gt;
+
+    &lt;p&gt;ถ้าสนใจลองศึกษา
+ &lt;a href=&quot;https://github.com/typekit/webfontloader&quot;&gt;https://github.com/typekit/webfontloader&lt;/a&gt; สำหรับโหลด web font
+ &lt;a href=&quot;https://github.com/filamentgroup/loadCSS&quot;&gt;https://github.com/filamentgroup/loadCSS&lt;/a&gt; สำหรับโหลด CSS
+ &lt;a href=&quot;http://www.w3schools.com/tags/att_script_async.asp&quot;&gt;http://www.w3schools.com/tags/att_script_async.asp&lt;/a&gt; สำหรับโหลด JS&lt;/p&gt;
+
+    &lt;p&gt;ข้างบนทั้งหมด คือ การโหลดแบบ Asynchronous&lt;/p&gt;
+
+    &lt;p&gt;อ่านเพิ่มเติม:&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en&quot;&gt;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/docs/insights/BlockingJS&quot;&gt;https://developers.google.com/speed/docs/insights/BlockingJS&lt;/a&gt;
+  &lt;a href=&quot;http://armno.github.io/2015/05/04/use-loadcss-to-improve-rendering-performance&quot;&gt;http://armno.github.io/2015/05/04/use-loadcss-to-improve-rendering-performance&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;JavaScript Uglify/Minify&lt;/p&gt;
+
+    &lt;p&gt;อีกวิธีการที่จะช่วยให้ Browser HTTP Request ไปยัง assets ไม่ว่าจะเป็น HTML, JS และ CSS เพื่อดาวน์โหลดได้ไวขึ้น นั่น คือ การทำ Uglify หรือ Minify เพื่อทำให้ไฟล์เหล่านี้ มีขนาดที่เล็กลง&lt;/p&gt;
+
+    &lt;p&gt;ผมใช้ gulp ในการ minify js และ css ทุกครั้งเมื่อมีการ save file&lt;/p&gt;
+
+    &lt;p&gt;อ่านเพิ่มเติม:&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://developers.google.com/speed/docs/insights/MinifyResources&quot;&gt;https://developers.google.com/speed/docs/insights/MinifyResources&lt;/a&gt;
+ &lt;a href=&quot;http://codehangar.io/concatenate-and-minify-javascript-with-gulp/&quot;&gt;http://codehangar.io/concatenate-and-minify-javascript-with-gulp/&lt;/a&gt;
+ &lt;a href=&quot;https://css-tricks.com/gulp-for-beginners/&quot;&gt;https://css-tricks.com/gulp-for-beginners/&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;CSS Uglify/Minify&lt;/p&gt;
@@ -109,19 +137,59 @@ WebKit is an open source rendering engine which started as an engine for the Lin
 &lt;h3 id=&quot;network&quot;&gt;Network&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Make Fewer Requests&lt;/p&gt;
+    &lt;p&gt;Make Fewer Requests
+ ง่ายที่สุดที่สำหรับวิธีนี้ คือ HTTP request ให้น้อยที่สุดเท่าที่เป็นไปได้&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Maximising parallelisation / Parallel Downloads Across Domains&lt;/p&gt;
+    &lt;p&gt;Maximising parallelisation / Parallel Downloads Across Domains
+ โดยปกติแล้ว Browser สามารถทำสิ่งที่เรียกว่า Multiple (Parallel) HTTP Request at once หรือ Browser สามารถ HTTP Request พร้อมกันได้มากกว่า 1 request ในช่วงเวลานึง สำหรับ 1 domain name แต่!! ไม่เกิน 3-6 Requests และนี่ คือ ปัญหาคอขวดของ Web Browser&lt;/p&gt;
+
+    &lt;p&gt;อีกความหมาย คือ เมื่อ Browser พยายาม Request ไปยัง สักหนึ่งเวปไซต์ Browser สามารถโหลด Assets ต่างๆ เช่น รูป ไฟล์ พร้อมกันได้ สำหรับ 1 domain ในหนึ่งช่วงเวลา แต่มันก็ยังมีข้อจำกัดที่ 6 request อยู่ดี&lt;/p&gt;
+
+    &lt;p&gt;แต่เราสามารถใช้เทคนิค domain sharding ได้ ด้วยการ HTTP Request ไปยัง sub.domain หรือ across multiple domains&lt;/p&gt;
+
+    &lt;p&gt;หรือการ request ไปยัง sub domain มันจะทำให้ ในหนึ่งช่วงเวลา จากเดิม สมมุติเรา request = 6 เมื่อโค๊ดของเรามีการ request sub domain ด้วย เราก็จะได้อีก 6 ในช่วงเวลาเดียวกัน&lt;/p&gt;
+
+    &lt;p&gt;อ่านเพิ่มเติม:&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/#section:http-requests-and-dns-lookups&quot;&gt;http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/#section:http-requests-and-dns-lookups&lt;/a&gt;
+ &lt;a href=&quot;https://www.keycdn.com/blog/parallel-downloads-across-domains/&quot;&gt;https://www.keycdn.com/blog/parallel-downloads-across-domains/&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;ใช้ CDN (Content Delivery Network) แทนการอ้างสคริปภายใต้ domain web server ของเรา&lt;/p&gt;
+    &lt;p&gt;ใช้ CDN (Content Delivery Network) แทนการอ้างสคริปภายใต้ domain web server ของเรา
+ หากเราต้องการลดภาระของ web server ของเรา ในการ deliver assets เช่น js, css framework ให้กับ User เราสามารถใช้ CDN ที่เขา host file เหล่านี้ไว้ให้แล้ว&lt;/p&gt;
+
+    &lt;p&gt;และอีกสาเหตุหนึ่งที่เป็นหัวใจหลักของ CDN นั่นก็คือ ระบบ caching, shorted path ในการ deliver assets ที่ผมบอกข้างบน&lt;/p&gt;
+
+    &lt;p&gt;สมมุติว่า Web server ผมอยู่ที่ US แต่มี User ที่ใช้งานเวปไซต์ผมที่ Bangkok แน่นอนว่า ไกลกันมากในระยะทางการให้บริการ ถ้าหากเราใช้ CDN เช่น Google CDN ตัว server ของ google จะทำการหา CDN Node ที่ใกล้เรามากที่สุด สำหรับ assets นั้นๆ ทำให้เวปโหลดเร็วขึ้น และลดภาระการ Request จาก Web Server เราได้ด้วย&lt;/p&gt;
+
+    &lt;p&gt;อ่านเพิ่มเติม:&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://jojoee.com/why-use-a-cdn/&quot;&gt;http://jojoee.com/why-use-a-cdn/&lt;/a&gt;
+ &lt;a href=&quot;https://developers.google.com/speed/libraries/&quot;&gt;https://developers.google.com/speed/libraries/&lt;/a&gt;
+ &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_delivery_network&quot;&gt;https://en.wikipedia.org/wiki/Content_delivery_network&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;HTTP requests and DNS lookups&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;DNS prefetching&lt;/p&gt;
+    &lt;p&gt;DNS prefetching
+มาพูดถึง DNS กันก่อน เอาง่ายๆ ถ้าเรามี HTTP Request ไปยัง domain.com DNS ต้องทำการ Resolve URL to IP Address แปลง domain ไปเป็น IP Address นั่นเอง&lt;/p&gt;
+
+    &lt;p&gt;สมมุติว่าเรามีการ เรียกไฟล์ CSS ไปยังสัก domain.com มันต้องเสียเวลา resolve ใช่ไหมครับ และมันจะเกิดปัญหา Render blocking resource ด้วย&lt;/p&gt;
+
+    &lt;p&gt;ดังนั้น เราจะบอกให้ Browser ไป Resolve URL ล่วงหน้าเลย เมื่อถึงเวลาที่ต้องใช้ CSS เหล่านั้น ในตอน Rendering process จะได้นำไปใช้ได้เลย ไม่ต้องเสียเวลา Resolve URL&lt;/p&gt;
+
+    &lt;p&gt;แต่มันก็มีคำถามมาอยู่ดีว่า Resolve ก่อน หลัง มันก็ไม่ต่างกันอยู่ดีไม่ใช่หรอ คำตอบ คือ ไม่ครับ DNS Prefetching ทำงานแบบ Asynchronous ซึ่งนั่นมันจะไม่ทำให้เกิด Render blocking resource&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;link rel=&quot;dns-prefetch&quot; href=&quot;//example.com&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://www.siamhtml.com/speed-up-website-with-dns-prefetch/&quot;&gt;http://www.siamhtml.com/speed-up-website-with-dns-prefetch/&lt;/a&gt;
+&lt;a href=&quot;https://css-tricks.com/prefetching-preloading-prebrowsing/&quot;&gt;https://css-tricks.com/prefetching-preloading-prebrowsing/&lt;/a&gt;
+&lt;a href=&quot;https://www.chromium.org/developers/design-documents/dns-prefetching&quot;&gt;https://www.chromium.org/developers/design-documents/dns-prefetching&lt;/a&gt;
+&lt;a href=&quot;http://www.htmlgoodies.com/beyond/webmaster/how-your-browser-speeds-up-cross-domain-loading-using-dns-prefetching.html&quot;&gt;http://www.htmlgoodies.com/beyond/webmaster/how-your-browser-speeds-up-cross-domain-loading-using-dns-prefetching.html&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
